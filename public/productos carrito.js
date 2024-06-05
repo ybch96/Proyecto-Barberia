@@ -54,15 +54,13 @@ function agregar(){
     info1.appendChild(div)
     
     })
-   
-       }
+    
+    }
+
     }
 
 
-contadores()
-
-
-
+ contadores()
  agregar()
  total1()
 
