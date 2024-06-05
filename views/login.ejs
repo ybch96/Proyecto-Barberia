@@ -1,0 +1,59 @@
+<%-include('./partials/head')-%>
+
+    <body>
+    <%-include('./partials/header')-%>
+        <main>
+        <div class="sol_tur_containerM">
+            <%if(typeof message !== 'undefined') { %>
+                <%=message%>
+                <%}%>
+            <div class="ingreso-form">
+                    <form action="login" id="ingreso" method="post" >  
+                <div class="in-label">
+                    <label> Usuario
+                        <input type="text" name="usu" id="usu" placeholder="Celular o correo"> 
+                    </label>
+                </div>
+                <div class="in-label">
+            <label>Contraseña
+                <input type="password" name="pass" id="pass">
+            </label>
+        </div>
+                <div class="rol">
+                    <label>
+                        Rol
+                    </label>
+            <label>
+               
+                Administrador
+                <input type="radio" name="rol" id="rol" value="Administrador">
+                Cliente
+                <input type="radio" name="rol" id="rol" value="Cliente">
+            </label>
+        </div>
+        <div class="boton">
+            <button>Ingresar</button>
+        </div>
+    </form>
+    <div class="go_register">
+        <a id="volver" href="/register">Registrarse</a>
+        </div>
+    <div class="go_register">
+        <a id="volver" href="/recuperar">Recuperar contraseña</a>
+        </div>
+    </div>
+
+</div>
+
+</main>
+
+        <footer>
+            <h2>Siguenos en nuestras redes sociales</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illum eligendi ad repellendus dignissimos iste veniam ex autem perspiciatis numquam, tenetur accusantium enim, exercitationem nulla fugiat quisquam, officia ratione harum?</p>
+        </footer>
+    <script src="/logica.js"></script>
+    <script src="/productos carrito.js"></script>
+
+
+    </body>
+</html>

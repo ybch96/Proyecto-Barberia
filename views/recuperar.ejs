@@ -1,0 +1,23 @@
+<%-include('./partials/head')-%>
+<body>
+  <%-include('./partials/header')-%>
+    <main>
+        <% if(typeof message !== 'undefined'){%>
+           <%=message%>
+           <%}%>
+    <form action="/recuperar" method="post">
+        <label>
+            Usuario
+            <input type="text" name="user" id="">
+        </label>
+        <label>
+            Nueva Contraseña
+            <input type="text" name="pass" id="">
+        </label>
+        <button>Enviar</button>
+    </form>
+</main>
+<script src="/logica.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<%-include('./partials/head')-%>
+
+<body>
+<%-include('./partials/header')-%>
+    <main>
+        <div>
+            <% if (typeof message !== 'undefined') { %>
+            <div>
+            <button><a href="config">X</a></button>
+            <%=message%> 
+            </div>
+            <%}%>
+           </div> 
+           <h1>Registro de servicios</h1>
+            <form action="/config" method="post">
+                <label>
+                    Nombre servicio
+                    <input type="text" name="N_servicio" id="">
+                </label>
+                <label>
+                    Tipo de servicio
+                    <select name="T_servicio" id="">
+                    <option value="Corte">Corte</option>
+                    <option value="Cerquillo">Cerquillo</option>
+                </select>
+                </label>
+                <label>
+                    Costo
+                    <input type="number" name="Costo" id="">
+                </label>
+                <button>Enviar</button>
+            </form>
+        </div>
+    
+            <div class="table-div">
+                <%if(typeof row !== 'undefined'){%>
+                   <% row.forEach((element) =>{%>
+                       <table style="border: solid 1px black;">
+                         <tr>
+                            <th style="border: solid 1px black;"><%=element.nombreServicio%></th>
+                             <th style="border: solid 1px black;"><%=element.tipo_servicio%></th>
+                            <th style="border: solid 1px black;"><%=element.costo%></th>
+                            <th style="border: solid 1px black;"> 
+                          <a href="/<%=element.nombreServicio%>"><button>Eliminar</button></a>
+                          <a href="/edit/<%=element.idServicio%>"><button>Modificar</button></a>  
+
+                            </th>
+                          
+                         </tr>
+                       </table>
+                       <div>
+                         
+                       </div>
+                 <%})%>
+              <%}%>
+    
+            </div>
+   
+   
+    </main>
+    <script src="/logica.js"></script>
+
+</body>
+</html>

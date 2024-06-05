@@ -1,0 +1,99 @@
+<%-include('./partials/head')-%>
+
+    <body>
+<%-include('./partials/header')-%>
+        <main>
+            <% if (typeof rowLength !== 'undefined' && rowLength) { %>
+                <div class="alert alert-warning alert-dismissible" role="alert" style="margin-top: 28px;">
+                    No se puede registrar, usuario ya existe: <%= rowLength %>
+                  <!-- Botón para cerrar la alerta -->
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <% }  %>
+
+              <% if (typeof welcomeMessage !== 'undefined') { %>
+                <!-- Sección para mostrar mensajes de bienvenida con un enlace al formulario de inicio de sesión -->
+                <div class="alert alert-success alert-dismissible" role="alert" style="margin-top: 28px;">
+                  <%= welcomeMessage %>
+                  <!-- Enlace al formulario de inicio de sesión -->
+                  <a href="login" class="btn btn-success btn-sm mt-3 ">Ir a Login</a>
+                  <!-- Botón para cerrar la alerta -->
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <% } %>
+            <div class="register-container">
+                <div class="register-form">
+            <form action="/validar"  id="register" method="post">
+               <div class="i_l_container">
+                   <label>Nombre 
+                       <input type="text" name="nombres" id="name">
+                    </label>
+                </div>
+                <div class="i_l_container">
+                    <label>Apellidos
+                        <input type="text" name="apellidos" id="name">
+                    </label>
+                    
+                </div>
+                <div class="i_l_container">
+                    <label>Identificacion
+                        <input type="text" name="id" id="name">
+                    </label>
+                </div>
+                
+                    <div class="i_l_container">
+                       <label>Numero de celular
+                           <input type="text" name="numero_celular" id="name">
+                       </label>
+                    </div>
+                    <!-- <div class="i_l_container">
+                       <label>Usuario
+                           <input type="text" name="usuario" id="usuario" placeholder="Celular o correo">
+                       </label>
+                    </div>
+                    <div class="i_l_container">
+                       <label>Contraseña
+                           <input type="password" name="contraseña" id="contraseña">
+                       </label>
+                    </div> -->
+                 <div class="i_l_container">
+                     <label>Fecha de nacimiento
+                         <input type="date" name="fecha_nacimiento" id="">
+                        </label>
+                    </div>
+                 <div class="i_l_container">
+                     <label>Correo
+                         <input type="text" name="correo" id="">
+                        </label>
+                    </div>
+                  <!-- <div clas="sex">
+                      <label class="l_sex">Rol</label>
+                      
+                      <label class="sex_label">
+                        Administrador
+                          <input type="radio" name="rol" id="rol" value="1">
+                        </label>
+                
+                            
+                         <label class="sex_label">Cliente
+                             <input type="radio" name="rol" id="rol" value="2">
+                            </label>
+                        </div> -->
+
+                        <div class="boton">
+                            <button>Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                
+        </main>
+        <footer>Siguenos en nuestras redes sociales
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor numquam vel adipisci voluptatum tenetur dolore facere consectetur minus minima! Nam itaque tempore odio dolorem quas architecto minus dicta voluptas!</p>
+        </footer>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="/logica.js"></script>
+    
+    </body>
+</html>

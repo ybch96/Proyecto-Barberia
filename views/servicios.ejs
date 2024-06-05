@@ -1,0 +1,62 @@
+<%-include('./partials/head')-%>
+<body>
+<%-include('./partials/header')-%>
+   
+
+    <main>
+<h1>Servicios</h1>
+
+        <%if(typeof row !== 'undefined'){%>
+    <div class="servicios_div" >
+        <% row.forEach((element) => { %>
+
+        <div class="servicios_div2">
+
+        <li class="servicios_li1"><%=element.nombreServicio%></li>
+        <li class="servicios_li2"><%=element.tipo_servicio%></li>
+        <li class="servicios_li3"><%=element.costo%></li>
+        <button class="boton1">Agregar</button>
+      <!-- <a href="/edit/<%=element.idServicio%>">Agregar</a>   -->
+    </div>
+    <%})%>
+   
+    </div>
+    <%}%>
+
+  
+      <div>
+        <%if(typeof Row !== 'undefined'){%>
+        <% Row.forEach((element) => {%>
+        <table style="border: solid 1px black;">
+            <tr>
+                <th>Nombre de servio</th>
+                <th>Costo</th>
+            </tr>
+            <tr>
+                <th><%=element.nombreServicio%></th>
+                <th><%=element.tipo_servicio%></th>
+                <th><%=element.costo%></th>
+            </tr>
+            <!-- <tr>
+                <th style="border: solid 1px black;  width: 10px;"><%=element.nombreServicio%></th>
+                <th style="border: solid 1px black;"><%=element.tipo_servicio%></th>
+                <th style="border: solid 1px black;"><%=element.costo%></th>
+            </tr> -->
+            <!-- <tr> -->
+            <!-- <td style="border: solid 1px black;">Yair</td>
+            <td style="border: solid 1px black;">Bossio</td>
+            <td style="border: solid 1px black;">1044931</td>
+            </tr> -->
+            <button>Pagar</button>
+        </table>
+
+ <%})%>
+ <%}%>
+    
+             
+    </main>
+    <script src="/logica.js"></script>
+    <script src="/productos carrito.js"></script>
+
+</body>
+</html>

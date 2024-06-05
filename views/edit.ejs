@@ -1,0 +1,42 @@
+<%-include('./partials/head')-%>
+
+
+
+<body>
+   <%-include('./partials/header')-%>
+    <div class="grid text-center">
+
+    <h1>Editar registros
+
+    </h1>
+    <%if(user){%> 
+      
+
+    <form action="/edit" method="post">
+       
+          
+        <input type="text" value="<%=user.idServicio%>" name="id" id="id" hidden>
+        <label>
+            Nombre
+            <input type="text" value="<%=user.nombreServicio%>"  name="nombre" id="nombre">
+        </label>
+            <!-- <label>
+                Admin
+                <input type="radio" value="Admin"  name="admin" id="">
+            </label>
+            <label>
+                User
+            </label>
+            <select name="" id="">
+            <option   value="User"  name="user" id=""  > </option>
+        </select> -->
+
+         <button>Enviar</button>
+    </form>
+    <%}%>
+
+    </div>
+    <script src="/logica.js"></script>
+
+</body>
+</html>
