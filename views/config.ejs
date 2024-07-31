@@ -5,7 +5,7 @@
     <main>
         <div>
             <% if (typeof message !== 'undefined') { %>
-            <div>
+            <div class="message">
             <button><a href="config">X</a></button>
             <%=message%> 
             </div>
@@ -28,26 +28,33 @@
                     Costo
                     <input type="number" name="Costo" id="">
                 </label>
-                <button>Enviar</button>
+                <button>Agregar</button>
             </form>
         </div>
     
             <div class="table-div">
                 <%if(typeof row !== 'undefined'){%>
                    <% row.forEach((element) =>{%>
-                       <table style="border: solid 1px black;">
-                         <tr>
-                            <th style="border: solid 1px black;"><%=element.nombreServicio%></th>
-                             <th style="border: solid 1px black;"><%=element.tipo_servicio%></th>
-                            <th style="border: solid 1px black;"><%=element.costo%></th>
-                            <th style="border: solid 1px black;"> 
-                          <a href="/<%=element.nombreServicio%>"><button>Eliminar</button></a>
-                          <a href="/edit/<%=element.idServicio%>"><button>Modificar</button></a>  
-
-                            </th>
-                          
-                         </tr>
-                       </table>
+              
+                      <table class="table caption-top">
+                        <caption>Lista de servicios</caption>
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</td>
+                            <th scope="col">Tipo de servicio</th>
+                            <th scope="col">Costo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><%=element.nombreServicio%></td>
+                            <td><%=element.tipo_servicio%></td>
+                            <td><%=element.costo%></td>
+                            <td scope="col-3"><a href="/<%=element.nombreServicio%>"><button>Eliminar</button></a></td> 
+                            <td scope="col-3"><a href="/edit/<%=element.idServicio%>"><button>Modificar</button></a> </td> 
+                          </tr>
+                        </tbody>
+                      </table>
                        <div>
                          
                        </div>
@@ -59,6 +66,10 @@
    
     </main>
     <script src="/logica.js"></script>
+    <script src="/productos carrito.js"></script>
+    <script src="/profile.js"></script>
+
+
 
 </body>
 </html>

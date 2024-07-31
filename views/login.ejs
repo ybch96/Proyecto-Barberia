@@ -4,19 +4,26 @@
     <%-include('./partials/header')-%>
         <main>
         <div class="sol_tur_containerM">
+            <div class="messages"></div>
             <%if(typeof message !== 'undefined') { %>
+               <%if (message === 'Usuario o contraseña incorrectos') { %>
                 <%=message%>
+                <a href="login"><button>X</button></a>
+                <% }else {%>
+                <%=message%>
+                <a href="/"><button>Ir al inicio</button></a>
+                   <%}%>
                 <%}%>
             <div class="ingreso-form">
-                    <form action="login" id="ingreso" method="post" >  
+                    <form  id="ingreso"  >  
                 <div class="in-label">
                     <label> Usuario
-                        <input type="text" name="usu" id="usu" placeholder="Celular o correo"> 
+                        <input type="text" name="usu" id="usu" placeholder="Celular o correo" required> 
                     </label>
                 </div>
                 <div class="in-label">
             <label>Contraseña
-                <input type="password" name="pass" id="pass">
+                <input type="password" name="pass" id="pass" required>
             </label>
         </div>
                 <div class="rol">
@@ -26,9 +33,9 @@
             <label>
                
                 Administrador
-                <input type="radio" name="rol" id="rol" value="Administrador">
+                <input type="radio" name="rol" id="rol" value= 1  required>
                 Cliente
-                <input type="radio" name="rol" id="rol" value="Cliente">
+                <input type="radio" name="rol" id="rol" value=2   required>
             </label>
         </div>
         <div class="boton">
@@ -39,7 +46,7 @@
         <a id="volver" href="/register">Registrarse</a>
         </div>
     <div class="go_register">
-        <a id="volver" href="/recuperar">Recuperar contraseña</a>
+        <a id="volver" href="/recuperar">Cambiar contraseña</a>
         </div>
     </div>
 
@@ -53,6 +60,8 @@
         </footer>
     <script src="/logica.js"></script>
     <script src="/productos carrito.js"></script>
+    <script src="/profile.js"></script>
+
 
 
     </body>

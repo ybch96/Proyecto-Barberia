@@ -1,487 +1,618 @@
-*,:before,:after{
-    box-sizing: border-box;
-    margin: 0;
-    } 
-    
-    :root{
-        --color:white;
-        --font-size:1.5rem;
-    }
-    
-    html{
-        height: 100%;
-    }
-    
-     body{
-        display: flex;
-        flex-direction: column;
-        min-height: 100%;
-        background-image:linear-gradient(rgba(20,20,20,.2),rgba(20,20,20,.2) )     
-        ;
-        
-       
-    }
-
-    li{
-        list-style: none;
-    }
-
-.icon-cart{
-    width: 30px;
-    height: 30px;
-    font-size: 10px;
-    color: white;
-    margin-right: 10px;
-    cursor: pointer;
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.total{
-    display: flex;
+:root {
+  --color: white;
+  --font-size: 1.5rem;
 }
 
-.cotainer-icon{
-    position: relative;
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-image: linear-gradient(
+    rgba(20, 20, 20, 0.2),
+    rgba(20, 20, 20, 0.2)
+  );
+}
+
+li {
+  list-style: none;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+.divBarber{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameBarber{
+  margin: 10px;
+}
+.botonEliminar{
+  margin: 5px;
+}
+
+.card{
+  flex-wrap: wrap;
+  
+}
+
+.card-content{
+  width: 100%;
+}
+.card-boyd{
+  /* flex-wrap: wrap; */
+  align-items: center;
+  border: solid 1px black;
+  margin: 5px;
+  box-shadow: 5px 5px 7px 1px black;
+}
+.card-list{
+  align-items: center;
+}
+.boton{
+  margin: 5px;
+}
+
+.boton a{
+  color: black;
+}
+
+.botones{
+  display: flex;
+}
+
+.pagar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session{
+  margin-left: 850px;
+  color: white;
+  cursor: pointer;
+}
+.session:hover{
+  color: black;
+}
+
+.contenidoSesion{
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  background-color: white;
+  margin-top: 40px;
+  right: 5px;
+  z-index: 3;
+}
+
+.cerrarSession a { 
+ color: red;
+ font-size: small;
+}
+
+.containerH .toma{
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 100;
+  
+}
+
+.cerrarSe{
+  cursor: pointer;
+}
+.servicios_li1, .servicios_li2, .servicios_li13{
+  margin: 5px;
+}
+
+.message{
+  margin-top: 50px;
+}
+
+.tot, .total1{
+  margin: 5px;
+  color: black;
+}
+.Servicios{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.icon-cart {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+}
+
+.cotainer-icon {
+  position: relative;
+  width: 400px;
+}
+
+.cantida-element,
+.nombre-element,
+.price-element {
+  padding: 10px;
+  font-weight: 700;
+}
+
+.contador-div {
+  position: absolute;
+  top: 7%;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.elements-div {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 300px;
+  height: 420px;
+  z-index: 1;
+  background-color: white;
+  flex: 0.8;
+  border: solid 1px black;
+  box-shadow: -5px 5px  8px 8px  rgb(13, 13, 13);
+}
+
+.info-cart {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+.total {
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div {
+  display: flex;
+}
+
+.hiden {
+  display: none;
+}
+
+.servicios_div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  /* display: inline-block; */
+}
+
+.servicios_div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  border: solid 1px black;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+/* .servicios_li {
+  list-style: none;
+  margin-bottom: 5px;
+} */
+
+header {
+  width: 100%;
+  top: 0;
+}
+
+.containerH {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  align-items: center;
+  background-color: rgb(143, 107, 57);
+}
+
+.containerH nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerH nav a {
+  margin-right: 10px;
+  color: white;
+
+}
+.containerH a {
+  /* color: white; */
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.containerH .logo {
+  margin-left: 10px;
+}
+
+.containerH img {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  background-color: rgb(143, 107, 57);
+  width: 100%;
+  margin-top: auto;
+}
+
+/* style inicio */
+.inicio_container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+p,
+h1,
+h2 {
+  text-align: center;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.inicio_container img {
+  width: 150px;
+  height: 150px;
+  margin: 0 5px;
+}
+
+.carousel {
+  width: 1400px;
+}
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.carousel-item img {
+  width: 500px;
+  height: 500px;
+}
+/* style solititar turno */
+
+.sol_tur_containerM {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image:linear-gradient(rgba(20,20,20,.2),rgba(20,20,20,.2) )     ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sol_tur_containerB{
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image:linear-gradient(rgba(20,20,20,.2),rgba(20,20,20,.2) )     ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rol {
+  color: white;
+}
+@media (max-width: 1024px) {
+  .sol_tur_containerM {
+    margin: 300px 0;
+  }
+}
+.ingreso-form {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 10px 10px 10px rgba(20, 20, 20, 1);
+  background-color: hsl(20, 10%, 19%);
+  padding: 50px 30px;
+  /* margin: 500px 0;       */
+}
+
+.ingreso-form input {
+  font-size: var(--font-size);
+  margin-top: 10px;
+}
+
+.ingreso-form button {
+  color: white;
+  margin-top: 15px;
+  padding: 0.4em;
+  font-size: 1.2em;
+  background-color: black;
+  box-shadow: 0 10px 10px rgba(20, 20, 20, 1);
+  cursor: pointer;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.in-label input {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-label label {
+  color: var(--color);
+  font-size: var(--font-size);
+}
+
+.go_register a {
+  color: var(--color);
+  font-size: var(--font-size);
+}
+
+/* Style register */
+
+.register-container {
+  /* height: 100vh; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  background-color: hsl(20, 10%, 19%);
+  border-radius: 1em;
+  padding: 30px;
+  box-shadow: 10px 10px 10px rgba(20, 20, 20, 1);
+  margin: 100px 0;
+}
+
+.register-form button {
+  color: white;
+  margin-top: 30px;
+  padding: 0.4em;
+  font-size: 1.2em;
+  background-color: black;
+  box-shadow: 0 10px 10px rgba(20, 20, 20, 1);
+  cursor: pointer;
+}
+
+.i_l_container input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: var(--font-size);
+}
+
+.register-form label {
+  color: white;
+  font-size: var(--font-size);
+}
+
+.l_sex {
+  margin-right: 5px;
+}
+
+label.sex_label {
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+@media (max-height: 800px) {
+  .register-form {
     width: 400px;
+    height: 500px;
+  }
+
+  .register-form label {
+    font-size: 0.9rem;
+  }
+
+  .register-form input {
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .register-form button {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-height: 600px) {
+  .ingreso-form {
+    margin: 120px 0;
+    width: 400px;
+    height: 400px;
+  }
+
+  .register-form {
+    height: 460px;
+  }
+
+  .register-form label {
+    font-size: 0.9rem;
+  }
+
+  .register-form input {
+    font-size: 1em;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+
+  .register-form button {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1286px) {
+  body {
+    height: 100vh;
+    padding-top: 100px;
+  }
+
+
+  .containerH a {
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 30;
+  }
+
+  .containerH nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .containerH nav a {
+    margin-left: 15px;
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .ingreso-form {
+    margin: 267.5px 0;
+  }
+
+  .register-container {
+    padding-top: 70px;
+  }
 
 }
 
-.cantida-element, .nombre-element, .price-element{
-    padding: 10px;
-    font-weight: 700;
-}
+.editor-card {
+  margin: 10px;
+}   
 
-.contador-div{
+
+@media (min-width: 923px){
+  body{
+    padding-top: 180px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 30;
+  }
+  .contador-div {
     position: absolute;
-    top: 7%;
+    top: 42%;
+    right: 15px;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media (min-width: 926px){
+  .contador-div {
+    position: absolute;
+    top: 42%;
+    right: 5px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 950px) {
+  .contador-div {
+    position: absolute;
+    top: 42%;
     right: 20px;
     color: white;
     cursor: pointer;
+  }
+
+
 }
 
-.elements-div{
+@media (min-width: 956px) {
+  .elements-div {
     position: absolute;
-    top:150px;
+    top: 150px;
     right: 0;
     width: 300px;
-    height: 350px;
+    height: 420px;
     z-index: 1;
     background-color: white;
-    flex:0.8;
-
+    flex: 0.8;
+  }
 }
-  
-.info-cart{
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
+
+@media (min-width: 1082px) {
+  .elements-div {
+    position: absolute;
+    top: 104px;
+    right: 0;
     width: 300px;
-    height: 300px;
-}
-
-.total{
-    color: blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.div{
-    display: flex;
-}
-
-    .hiden{
-        display: none;
-    }
-
-  .servicios_div{
-    display: flex;
-    margin-left: 10px;
-    /* display: inline-block; */
+    height: 420px;
+    z-index: 1;
+    background-color: white;
+    flex: 0.8;
   }
-  
-  .servicios_div2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: beige; border: solid 1px black; width: 200px; height: 200px;
-    margin: 10px;
-  }
-
-  .servicios_li{
-    list-style: none;
-    margin-bottom: 5px;
-  }
- 
-    
-    header{
-        width:100%;
-       top: 0;
-        
-    }
-    
-    
-    .containerH{
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 1em 0 ;
-        align-items: center;
-        background-color: rgb(143,107,57);
-    }
-    
-    .containerH nav{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-     }
-    
-     .containerH nav a{
-        margin-right: 10px;
-     }
-     .containerH a{
-        /* color: white; */
-        font-size: 1rem;
-        font-weight: 400;
-        text-decoration: none;
-     }
-     
-     a{
-       
-        text-decoration: none;
-        font-size: 2rem;
-        color: white;
-    }
-    
-     .containerH .logo{
-      margin-left: 10px;
-     }
-    
-    .containerH img{
-        width: 50px;
-        height: 50px;
-        
-    }
-    
-  
-    footer{
-     background-color: rgb(143,107,57);
-       width: 100%;
-       margin-top: auto;
-    }
-    
-    /* style inicio */
-    .inicio_container{
-        width: 100%;
-        margin-top: 50px;
-    }
-    
-     p,h1,h2{
-    text-align: center
-    }
-    
-    .img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
-    .inicio_container img{
-        width: 150px;
-        height: 150px;
-        margin: 0 5px ;
-    }
-
-    .carousel{
-        width: 1400px;
-       
-    }
-    .section-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-  
-
-    .carousel-item img{
-        width: 500px;
-        height: 500px;
-    }
-    /* style solititar turno */
-    
-    .sol_tur_containerM{
-        width: 100%;
-        padding-top:10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-image:linear-gradient(rgba(20,20,20,.2),rgba(20,20,20,.2) )     ; */
-        background-repeat: no-repeat;
-        background-size: cover;
-    
-    }
-
-    .rol{
-       color: white;
-    }
-    @media(max-width:1024px){
-        .sol_tur_containerM{
-            margin: 300px 0;
-        }
-    }
-    .ingreso-form{
-        width: 450px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        border-radius: 1em;
-        border:none;
-        margin-bottom: 10px;
-        box-shadow: 10px 10px 10px rgba(20,20,20, 1) ;
-        background-color: hsl(20, 10%, 19%);
-        padding: 50px 30px;
-        /* margin: 500px 0;       */
-    }
-    
-    .ingreso-form input{
-        font-size: var(--font-size);
-        margin-top: 10px;
-    }
-    
-    .ingreso-form button{
-        color: white;
-        margin-top: 15px;
-        padding: .4em;
-        font-size: 1.2em;
-        background-color: black;
-        box-shadow: 0 10px 10px rgba(20,20,20, 1) ;
-        cursor: pointer;
-    }
-    
-    .boton{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 18px;
-    }
-    
-    .in-label input{
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .in-label label{
-        color: var(--color);
-        font-size: var(--font-size);
-    
-    }
-    
-    .go_register a{
-        color: var(--color);
-        font-size: var(--font-size);
-    }
-    
-    /* Style register */
-    
-    .register-container{
-        /* height: 100vh; */
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-     
-      
-    }
-    
-    .register-form{
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        width: 400px;
-        background-color: hsl(20, 10%, 19%);
-        border-radius: 1em;
-        padding: 30px;
-        box-shadow: 10px 10px 10px rgba(20,20,20, 1) ;
-        margin: 100px 0;
-    }
-    
-    .register-form button{
-        color: white;
-        margin-top: 30px;
-        padding: .4em;
-        font-size: 1.2em;
-        background-color: black;
-        box-shadow: 0 10px 10px rgba(20,20,20, 1) ;
-        cursor: pointer;
-    }
-    
-     .i_l_container input{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        font-size:  var(--font-size);
-    }
-    
-    .register-form label{
-        color:white;
-        font-size: var(--font-size);
-    }
-    
-    .l_sex{
-        margin-right: 5px;
-    }
-    
-    label.sex_label{
-     font-size: 1rem;
-     margin-left: 8px;
-    }
-    
-    @media (max-height:800px){
-    
-          .register-form{
-           width: 400px;
-           height: 500px;
-          
-          }
-          
-
-          .register-form label{
-            font-size: .9rem;
-          
-          }
-    
-          .register-form input{
-            font-size: 1em;
-            margin-bottom: 5px;
-            margin-top: 5px;
-          }
-    
-          .register-form button {
-            font-size: .9em;
-        }
-    
-      }
-    
-    @media (max-height:600px){
-        .ingreso-form{ 
-          margin: 120px 0;
-          width: 400px;
-          height: 400px;
-          }
-    
-          .register-form{
-            height: 460px;
-          }
-          
-          .register-form label{
-            font-size: .9rem;
-          
-          }
-    
-          .register-form input{
-            font-size: 1em;
-            margin-bottom: 3px;
-            margin-top: 3px;
-          }
-    
-          .register-form button {
-            font-size: .9em;
-        }
-    
-      }
-    
-     
-    
-    
-    
-    @media  (min-width:923px){
-        body{
-            height: 100vh;
-            padding-top: 100px;
-        }
-        
-        .containerH a{
-            font-size: 3rem;
-            font-weight: 600;
-            text-decoration: none;
-         }
-
-        header{
-             position: fixed; 
-             top: 0;
-             z-index: 30;
-        }
-        
-
-        .containerH nav{
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .containerH nav a{
-            margin-left: 15px;
-            font-size: 2.5rem;
-            color: white;
-
-        }
-        
-        .ingreso-form{
-            margin: 267.5px 0;
-        }
-    
-        .register-container{
-            padding-top: 70px;
-        }
-        /* .register-form{
-           
-            margin-bottom: 71.3px;
-        } */
-        }
-    .editor-card{
-        margin: 10px;
-    }
-/*     
-        .table-div{
-            display:flex;
-            width: 100px;
-        } */
-        
-    /* @media screen and (min-width:727px){
-        #ingreso{
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-             width: 450px;
-            background-color: hsl(20, 10%, 19%);
-            border-radius: 1em;
-            padding: 50px;
-            margin-bottom: 10px;
-            margin-top: 50px;
-            box-shadow: 10px 10px 10px rgba(20,20,20, 1) ;
-            text-align: start;
-        }
-    }
-    
-    @media screen and (min-width:721px){
-        #ingreso{
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-             width: 450px;
-            background-color: hsl(20, 10%, 19%);
-            border-radius: 1em;
-            padding: 50px;
-            margin-bottom: 10px;
-            margin-top: 180px;
-            box-shadow: 10px 10px 10px rgba(20,20,20, 1) ;
-            text-align: start;
-        }
-    } */
+}

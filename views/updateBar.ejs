@@ -1,0 +1,29 @@
+<%-include('./partials/head')-%>
+
+
+
+<body>
+   <%-include('./partials/header')-%>
+
+
+   <%if(typeof ro !== 'undefined'){%>
+    <h1>MOdificar barberos</h1>
+  <form action="/updateBarber" method="post">
+    <input type="text" value="<%=ro.idbarberos%>" name="id" id="" hidden>
+    <label>
+      Nombre
+      <input type="text" value="<%=ro.nombre%>" name="name" id="">
+    </label>
+    <label>
+      Apellido
+      <input type="text" value="<%=ro.apellido%>" name="lastName" id="">
+    </label>
+    <button>Enviar</button>
+  </form>
+  <%}%>
+    <script src="/logica.js"></script>
+    <script src="/productos carrito.js"></script>
+
+
+</body>
+</html>

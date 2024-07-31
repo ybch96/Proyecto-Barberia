@@ -1,0 +1,60 @@
+<%-include('./partials/head')-%>
+
+<body>
+    <%-include('./partials/header')-%>
+<div class="sol_tur_containerB">
+    <%if(typeof message !== 'undefined'){%>
+        <%=message%>
+        <%}%>
+    <form  id="barbero">
+        <label>
+            Identificacion barbero
+            <input type="number" name="id" required>
+        </label>
+        <label>
+            Nombre
+            <input type="text"  name="name" required>
+        </label>
+        <label>
+            Apellido
+            <input type="text" name="lastname" required>
+        </label>
+        <button>Agregar</button>
+    </form> 
+</div>
+
+    <br>
+    <%if(typeof message !== 'undefined'){%>
+        <%=message%> <a href="/barber">X</a>
+        <%}%>
+    <%if(typeof row !== 'undefined') {%>
+    <h2>Barberos</h2>
+
+        <div class="card-content">
+        <div class="card1" style="display: flex; flex-wrap: wrap; text-align: center; margin: 5px;">
+       <% row.forEach(element =>{%>
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-boyd">
+                    <div class="card-list">
+                  <h5 class="servicios_li1 card-title"><%=element.idbarberos%></h5>
+                  <p class="servicios_li2 card-text"><%=element.nombre%></p>
+                  <p class="servicios_li3 card-text"><%=element.apellidos%></p>
+                </div>
+                  <div class="botones">
+                  <button  class=" boton btn btn-primary"><a href="/deleteBar/<%=element.idbarberos%>">Eliminar</a></button>
+                  <button  class=" boton btn btn-primary"><a href="/updateBar/<%=element.idbarberos%>">Actualizar</a></button>
+                </div>
+            </div>
+            
+            <%})%>
+        </div>
+    </div>
+            <%}%>
+    
+
+            <script src="/logica.js"></script>
+            <script src="/productos carrito.js"></script>
+            <script src="/profile.js"></script>
+
+</body>
+</html>

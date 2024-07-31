@@ -9,7 +9,7 @@
     <h1>Editar registros
 
     </h1>
-    <%if(user){%> 
+    <%if(typeof  user !== 'undefined'){%> 
       
 
     <form action="/edit" method="post">
@@ -31,12 +31,16 @@
             <option   value="User"  name="user" id=""  > </option>
         </select> -->
 
-         <button>Enviar</button>
+         <button>Modificar</button>
     </form>
     <%}%>
 
     </div>
     <script src="/logica.js"></script>
+    <script src="/productos carrito.js"></script>
+    <script src="/profile.js"></script>
+
+
 
 </body>
 </html>

@@ -10,20 +10,35 @@
     <div class="servicios_div" >
         <% row.forEach((element) => { %>
 
-        <div class="servicios_div2">
-
-        <li class="servicios_li1"><%=element.nombreServicio%></li>
-        <li class="servicios_li2"><%=element.tipo_servicio%></li>
-        <li class="servicios_li3"><%=element.costo%></li>
-        <button class="boton1">Agregar</button>
-      <!-- <a href="/edit/<%=element.idServicio%>">Agregar</a>   -->
-    </div>
+    <div class="card" style="width: 18rem; text-align: center;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="servicios_li1 card-title"><%=element.nombreServicio%></h5>
+          <p class="servicios_li2 card-text"><%=element.tipo_servicio%></p>
+          <p class="servicios_li3 card-text"><%=element.costo%></p>
+          <button  class=" boton1 btn btn-primary">Agregar</button>
+        </div>
+      </div>
     <%})%>
    
     </div>
     <%}%>
-
-  
+<!-- 
+    <%if(typeof row !== 'undefined') {%>
+        <div class="card1" style="width: 18rem; text-align: center;">
+       <% row.forEach(element =>{%>
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-boyd">
+                  <h5 class="servicios_li1 card-title"><%=element.idbarberos%></h5>
+                  <p class="servicios_li2 card-text"><%=element.nombre%></p>
+                  <p class="servicios_li3 card-text"><%=element.apellidos%></p>
+                  <button  class=" boton btn btn-primary">Agregar</button>
+                </div>
+            
+            <%})%>
+        </div>
+        <%}%>
+   -->
       <div>
         <%if(typeof Row !== 'undefined'){%>
         <% Row.forEach((element) => {%>
@@ -57,6 +72,7 @@
     </main>
     <script src="/logica.js"></script>
     <script src="/productos carrito.js"></script>
+    <script src="/profile.js"></script>
 
 </body>
 </html>

@@ -2,9 +2,12 @@
 <body>
   <%-include('./partials/header')-%>
     <main>
-        <% if(typeof message !== 'undefined'){%>
-           <%=message%>
-           <%}%>
+       
+           <div class="sol_tur_containerB">
+            <% if(typeof message !== 'undefined'){%>
+                <%=message%>
+                <%}%>
+                <br>
     <form action="/recuperar" method="post">
         <label>
             Usuario
@@ -12,12 +15,17 @@
         </label>
         <label>
             Nueva Contraseña
-            <input type="text" name="pass" id="">
+            <input type="password" name="pass" id="">
         </label>
         <button>Enviar</button>
     </form>
+</div>
 </main>
 <script src="/logica.js"></script>
+<script src="/productos carrito.js"></script>
+<script src="/profile.js"></script>
+
+
 
 </body>
 </html>
